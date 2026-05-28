@@ -1,0 +1,312 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+/* HALAMAN 1 */
+
+.halaman1{
+    background:#c7b784;
+    height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    overflow:hidden;
+}
+
+.container1{
+    padding:20px;
+}
+
+/* FOTO */
+
+.foto-utama{
+    width:250px;
+
+    border-radius:20px;
+
+    animation: fotoNaikTurun 3s infinite;
+}
+
+/* JUDUL */
+
+.judul{
+    font-family:'Dancing Script', cursive;
+
+    font-size:65px;
+
+    color:#6F4E37;
+
+    margin-top:20px;
+
+    /* EFEK MASUK */
+    animation:
+    blurMasuk 2s ease,
+    kananKiri 4s infinite alternate;
+
+}
+
+/* SUBJUDUL */
+
+.subjudul{
+    color:#6F4E37;
+
+    font-size:20px;
+
+    font-family:Poppins;
+}
+
+/* BUTTON */
+
+.btn-kejutan{
+
+    margin-top:20px;
+
+    padding:15px 35px;
+
+    border:none;
+
+    border-radius:999px;
+
+    background:#6F4E37;
+
+    color:white;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+    animation:goyang 1s infinite;
+}
+
+/* HALAMAN 2 */
+
+.halaman2{
+
+    background:#c7b784;
+
+    color:#6F4E37;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.judul2{
+
+    font-family:'Dancing Script', cursive;
+
+    font-size:60px;
+
+    color:#6F4E37;
+}
+
+.ucapan{
+
+    max-width:700px;
+
+    margin:auto;
+
+    font-size:20px;
+
+    line-height:35px;
+
+    font-family:Poppins;
+}
+
+/* GALERI */
+
+.galeri{
+
+    margin-top:40px;
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+}
+
+.galeri img{
+
+    width:250px;
+
+    border-radius:20px;
+
+    transition:0.3s;
+}
+
+.galeri img:hover{
+
+    transform:scale(1.05);
+}
+
+/* ANIMASI FOTO */
+
+@keyframes fotoNaikTurun{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-15px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+}
+
+/* ANIMASI TEKS MASUK */
+
+@keyframes blurMasuk{
+
+    0%{
+        opacity:0;
+        filter:blur(20px);
+        transform:scale(1.3);
+    }
+
+    100%{
+        opacity:1;
+        filter:blur(0px);
+        transform:scale(1);
+    }
+}
+
+/* GERAK KANAN KIRI */
+
+@keyframes kananKiri{
+
+    0%{
+        transform:translateX(-20px);
+    }
+
+    100%{
+        transform:translateX(20px);
+    }
+}
+
+/* GOYANG BUTTON */
+
+@keyframes goyang{
+
+    0%{
+        transform:rotate(0deg);
+    }
+
+    25%{
+        transform:rotate(3deg);
+    }
+
+    50%{
+        transform:rotate(-3deg);
+    }
+
+    100%{
+        transform:rotate(0deg);
+    }
+}
+/* EFEK MASUK JUDUL */
+
+.animasiMasuk{
+
+    animation: blurMasuk 2s ease;
+}
+
+/* EFEK MASUK UCAPAN */
+
+.animasiMasuk2{
+
+    animation: fadeNaik 3s ease;
+}
+
+/* EFEK FOTO MASUK */
+
+.fotoMasuk{
+
+    animation: zoomMasuk 2s ease;
+}
+
+/* ANIMASI BLUR */
+
+@keyframes blurMasuk{
+
+    0%{
+        opacity:0;
+        filter:blur(20px);
+        transform:translateY(-50px);
+    }
+
+    100%{
+        opacity:1;
+        filter:blur(0px);
+        transform:translateY(0px);
+    }
+}
+
+/* ANIMASI FADE */
+
+@keyframes fadeNaik{
+
+    0%{
+        opacity:0;
+        transform:translateY(40px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+
+/* ANIMASI FOTO */
+
+@keyframes zoomMasuk{
+
+    0%{
+        opacity:0;
+        transform:scale(0.5);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1);
+    }
+}
+/* EFEK GERAK TEKS */
+
+.teksGerak{
+
+    animation:
+    blurMasuk 2s ease,
+    kananKiri 4s infinite alternate;
+
+    text-shadow:
+    0 0 10px rgba(255,255,255,0.3);
+}
+
+
+/* AUDIO DI POJOK */
+
+.music-player{
+
+    position:fixed;
+
+    bottom:20px;
+
+    right:20px;
+
+    width:200px;
+
+    height:35px;
+
+    opacity:0.8;
+}
